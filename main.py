@@ -11,11 +11,12 @@ FROM_ADDRS = os.environ.get("FROM_ADDRS")
 PASSWORD = os.environ.get("PASSWORD")
 TO_ADDRS = input("For receiving lowest Price notification please enter you E-Mail: \n")
 URL = input("Please give the URL of the product: \n")
+USER_AGENT = os.environ.get("USER_AGENT")
 
 response = requests.get(
     URL,
     headers={
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36",
+        "User-Agent": USER_AGENT,
         "Accept-Language": "en-US,en-US;q=0.9,en;q=0.8",
     }
 )
